@@ -21,7 +21,7 @@ public class AppController {
 	private ProductService service;
 	
 	/*Este metodo funciona sólo si se le coloca "Controller"*/
-	@RequestMapping(value="/", method=RequestMethod.GET)	
+	@RequestMapping(value="", method=RequestMethod.GET)	
 	public ModelAndView viewHomePage(Map<String, Object> model) {
 		List<Product> listProducts = service.listAll();
 		model.put("listProducts", listProducts);
