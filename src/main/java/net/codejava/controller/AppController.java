@@ -25,7 +25,7 @@ public class AppController {
 	public ModelAndView viewHomePage(Map<String, Object> model) {
 		List<Product> listProducts = service.listAll();
 		model.put("listProducts", listProducts);
-		return new ModelAndView("/index");
+		return new ModelAndView("index");
 	}
 	
 	@RequestMapping(value = "/new", method=RequestMethod.GET)
