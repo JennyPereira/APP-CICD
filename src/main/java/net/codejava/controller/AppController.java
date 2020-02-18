@@ -28,11 +28,11 @@ public class AppController {
 		return new ModelAndView("index");
 	}
 	
-	@RequestMapping(value = "/new", method=RequestMethod.GET)
+	@RequestMapping(value = "new", method=RequestMethod.GET)
 	public ModelAndView showNewProduct(Map<String, Object> model) {
 		Product product = new Product();
 		model.put("product", product);
-		return new ModelAndView("/newProduct");
+		return new ModelAndView("newProduct");
 	}
 	
 	@RequestMapping(value="/save", method = RequestMethod.POST)
